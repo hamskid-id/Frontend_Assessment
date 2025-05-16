@@ -60,7 +60,7 @@ export default function ThisWeekIncome() {
         if (ctx) {
           const gradient = ctx.createLinearGradient(0, 0, 0, 300)
           gradient.addColorStop(0, 'rgba(255, 255, 255, 0.9)')
-          gradient.addColorStop(0.7, 'rgba(255, 255, 255, 0.5)')
+          gradient.addColorStop(0.7, 'white')
           gradient.addColorStop(1, 'rgba(255, 255, 255, 0)')
 
           const newChartData = { ...chartData }
@@ -136,7 +136,7 @@ export default function ThisWeekIncome() {
   if (!isMounted) return null
 
   return (
-    <div className='border rounded-lg bg-white shadow-sm'>
+    <div className='border rounded-lg bg-white '>
       <div className='flex justify-between items-center px-4 pt-4'>
         <Text style='font-[500] text-[18px] leading-[24px]'>
           This Week's Income
