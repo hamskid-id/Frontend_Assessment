@@ -141,7 +141,7 @@ export default function ThisWeekIncome() {
         <Text style='font-[500] text-[18px] leading-[24px]'>
           This Week's Income
         </Text>
-        <Maximize2 className='w-5 h-5 text-gray-300' />
+        <Maximize2 className='w-5 h-5 text-gray-300 cursor-pointer' />
       </div>
       <div className='relative h-64 p-4'>
         <Line ref={chartRef} options={options} data={chartData} />

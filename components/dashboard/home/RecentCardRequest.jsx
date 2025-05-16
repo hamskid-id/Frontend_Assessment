@@ -57,7 +57,7 @@ export const RecentCardRequest = () => {
         <Text style='font-[500] text-[18px] leading-[24px]'>
         Recent Card Requests
         </Text>
-        <Maximize2 className='w-5 h-5 text-gray-300' />
+        <Maximize2 className='w-5 h-5 text-gray-300 cursor-pointer' />
       </div>
       <div className='p-4'>
         <TableLayout

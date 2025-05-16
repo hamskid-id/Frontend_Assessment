@@ -102,7 +102,7 @@ export default function MonthlyIssuance() {
         <Text style='font-[500] text-[18px] leading-[24px]'>
           Monthly Issuance
         </Text>
-        <Maximize2 className='w-5 h-5 text-gray-300' />
+        <Maximize2 className='w-5 h-5 text-gray-300 cursor-pointer' />
       </div>
       <div className='relative h-64 p-4'>
         <Bar options={options} data={data} />
