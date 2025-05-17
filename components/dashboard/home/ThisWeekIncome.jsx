@@ -41,9 +41,13 @@ export default function ThisWeekIncome() {
         tension: 0.4,
         pointRadius: 0,
         pointHoverRadius: 5,
-        backgroundColor: 'rgba(77, 175, 1, 0.2)',
+        backgroundColor: 'transparent',
         fill: true,
         cubicInterpolationMode: 'monotone',
+         shadowOffsetX: 0,
+        shadowOffsetY: 2,
+        shadowBlur: 7,
+        shadowColor: 'rgba(77, 175, 1, 0.3)',
       },
     ],
   })
@@ -58,13 +62,13 @@ export default function ThisWeekIncome() {
         const ctx = chart.canvas.getContext('2d')
 
         if (ctx) {
-          const gradient = ctx.createLinearGradient(0, 0, 0, 300)
-          gradient.addColorStop(0, 'rgba(255, 255, 255, 0.9)')
-          gradient.addColorStop(0.7, 'white')
-          gradient.addColorStop(1, 'rgba(255, 255, 255, 0)')
+
+          const shadowGradient = ctx.createLinearGradient(0, 0, 0, 300)
+          shadowGradient.addColorStop(0, 'rgba(77, 175, 1, 0.1)')
+          shadowGradient.addColorStop(1, 'rgba(77, 175, 1, 0)')
 
           const newChartData = { ...chartData }
-          newChartData.datasets[0].backgroundColor = gradient
+          newChartData.datasets[0].backgroundColor = 'transparent'
           setChartData(newChartData)
         }
       }
@@ -128,7 +132,10 @@ export default function ThisWeekIncome() {
         shadowOffsetX: 0,
         shadowOffsetY: 2,
         shadowBlur: 7,
-        shadowColor: 'rgba(177, 164, 175, 0.47)',
+        shadowColor: 'rgba(77, 175, 1, 0.3)',
+      },
+      point: {
+        hoverBackgroundColor: '#4DAF01',
       },
     },
   }
@@ -136,7 +143,7 @@ export default function ThisWeekIncome() {
   if (!isMounted) return null
 
   return (
-    <div className='border rounded-lg bg-white '>
+    <div className='border rounded-lg bg-white'>
       <div className='flex justify-between items-center px-4 pt-4'>
         <Text style='font-[500] text-[18px] leading-[24px]'>
           This Week's Income

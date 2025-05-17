@@ -8,7 +8,7 @@ export default function CardStatusDistribution() {
       status: 'Active',
       count: 950,
       color: 'bg-active',
-      strokeColor: '#4DAF01',
+      strokeColor: '#01A4AF',
     },
     {
       status: 'Expired',
@@ -35,7 +35,7 @@ export default function CardStatusDistribution() {
   const calculateSegments = () => {
     const radius = 60
     const circumference = 2 * Math.PI * radius
-    const gapSize = 4
+    const gapSize = 2
     const totalSegments = cardData.length
     const adjustedCircumference = circumference - gapSize * totalSegments
     let currentOffset = 0
@@ -112,7 +112,7 @@ export default function CardStatusDistribution() {
         {cardData.map((item, index) => (
           <Text
             key={index}
-            style='flex items-center gap-1 text-[12px] font-light text-gray-500'
+            style='flex items-center gap-1 text-[12px] font-[400] text-gray-500'
           >
             <span className={`w-2 h-2 rounded-full ${item.color}`}></span>
             {item.status}

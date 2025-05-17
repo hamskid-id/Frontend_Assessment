@@ -108,11 +108,11 @@ export default function MonthlyIssuance() {
         <Bar options={options} data={data} />
       </div>
       <div className='flex items-center justify-center gap-4 border-t p-4'>
-        <Text style='flex items-center gap-1 text-[12px] font-light text-gray-400'>
+        <Text style='flex items-center gap-1 text-[12px] font-[400] text-gray-400'>
           <span className='w-2 h-2 rounded-full bg-blue-900'></span>{' '}
           {'Personalized'}
         </Text>
-        <Text style='flex items-center gap-1 text-[12px] font-light text-gray-500'>
+        <Text style='flex items-center gap-1 text-[12px] font-[400] text-gray-500'>
           <span className='w-2 h-2 rounded-full bg-blue-200'></span> {'Instant'}
         </Text>
       </div>
